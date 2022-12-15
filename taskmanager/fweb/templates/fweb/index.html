@@ -1,0 +1,46 @@
+{% extends 'fweb/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Fead First</h1>
+    <h2>physical characteristics of elements</h2>
+
+    {% if prop %}
+        {% for el in prop %}
+            <div class="container">
+                <div class="row">
+                    <div class="alert alert-primary mt-2">
+                        <table>
+                            <tr>
+                                <th>Element [ {{ el.title }} ]</th>
+        <!--                        <h3>name {{ el.title }}</h3>-->
+        <!--                        <p>field1 {{ el.field1 }}</p>-->
+                            </tr>
+                                  <tr>  <td>Молекулярная масса = <span style="color:red">{{ el.field1 }}</span></td>                         </tr>
+                                  <tr>  <td>Норм. темп. плавления (К) = <span style="color:red">{{ el.field2 }}</span></td>                  </tr>
+                                  <tr>  <td>Норм. темп. кипения (К) = <span style="color:red">{{ el.field3 }}</span></td>                    </tr>
+                                  <tr>  <td>Критическая темп (К) = <span style="color:red">{{ el.field4 }}</span></td>                       </tr>
+                                  <tr>  <td>Критическое давление (Па) = <span style="color:red">{{ el.field5 }}</span></td>                  </tr>
+                                  <tr>  <td>Критический обьем (M^3/Кмоль)  =<span style="color:red">{{ el.field6 }}</span></td>              </tr>
+                                  <tr>  <td>Крит к-ент сжимаемости = <span style="color:red">{{ el.field7 }}</span></td>                     </tr>
+                                  <tr>  <td>Фактор ацентричн. Питцера = <span style="color:red">{{ el.field8 }}</span></td>                  </tr>
+                                  <tr>  <td>Плотность жидк. при опорн. темп. (Кг/М^3) = <span style="color:red">{{ el.field9 }}</span></td>  </tr>
+                                  <tr>  <td>Опорная температура (К) = <span style="color:red">{{ el.field10 }}</span></td>                   </tr>
+                                  <tr>  <td>Дипольный момент ((Н*М^4)^0.5) = <span style="color:red">{{ el.field11 }}</span></td>            </tr>
+                                  <tr>  <td>Стан. тепл. образ. при 298К (Дж/Кмоль) = <span style="color:red">{{ el.field12 }}</span></td>    </tr>
+                                  <tr>  <td>Тепл. парообр. при Т кип.нор. (Дж/Кмоль) = <span style="color:red">{{ el.field13 }}</span></td>  </tr>
+                                  <tr>  <td>Изобарн. потенц. (при н.у.) (Дж/Кмоль) = <span style="color:red">{{ el.field14 }}</span></td>    </tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>data base is empty</p>
+    {% endif %}
+
+{% endblock %}

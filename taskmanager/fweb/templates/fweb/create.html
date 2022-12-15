@@ -1,0 +1,31 @@
+{% extends 'fweb/base.html' %}
+
+{% block title %}
+create data block
+{% endblock %}
+
+{% block content %}
+  <h1>create data in our table </h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.field1 }}<br>
+    {{ form.field2 }}<br>
+    {{ form.field3 }}<br>
+    {{ form.field4 }}<br>
+    {{ form.field5 }}<br>
+    {{ form.field6 }}<br>
+    {{ form.field7 }}<br>
+    {{ form.field8 }}<br>
+    {{ form.field9 }}<br>
+    {{ form.field10 }}<br>
+    {{ form.field11 }}<br>
+    {{ form.field12 }}<br>
+    {{ form.field13 }}<br>
+    {{ form.field14 }}<br>
+    <span>{{ error }}</span>
+    <button type="submit" class="btn btn-success">Add</button>
+
+  </form>
+
+{% endblock %}
